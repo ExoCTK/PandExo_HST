@@ -1,7 +1,7 @@
 
 import numpy as np
 import os, json
-import cPickle as pkl
+import _pickle as pkl
 
 class SetDefaultModes():
     """
@@ -122,7 +122,7 @@ def run_pandexo(pandexo_input, pandeia_input, save_file=True, output_path=os.get
         
     if output_file == '':
         output_file = 'singlerun.p'
-    if save_file: pkl.dump(results, open(os.path.join(output_path,output_file),'w'))
+    if save_file: pkl.dump(results, open(os.path.join(output_path,output_file),'wb'))
     
     return results
     
